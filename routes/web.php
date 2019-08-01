@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('posts', function () {
+    $name='Purvik'; 
+	return view('posts/welcome', compact('name'));
+});
+
+Route::get('posts/viewallposts', function () { 
+$posts=	[	'First Post',
+					'Second Post',
+					'Third Post'
+				];
+return view('posts/viewallposts', compact('posts'));
+});
+
+
+
+
